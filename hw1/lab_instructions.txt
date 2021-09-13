@@ -38,14 +38,13 @@ For this challenge you’ll be planning and implementing a formatting strategy f
 		  iv.	applies a class of “flowLeft”
 
 Hw tracking:
-1 - incomplete
+1 - complete
 2 - complete
 3 - complete
 4 - complete
 5 - complete
 6 - complete
 
-* when downloading the project from glitch.com, it didn't download the assets folder so
-  I just used the cdn links for the images, i hope that's ok :)
+* when downloading the project from glitch.com, it didn't download the assets folder so I created my own
 
   4b and 4d are confusing
