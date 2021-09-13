@@ -41,7 +41,7 @@ Hw tracking:
 1 - incomplete
 2 - complete
 3 - complete
-4 - semi-complete
+4 - complete
 5 - complete
 6 - complete
 
