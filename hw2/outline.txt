@@ -1,0 +1,34 @@
+Document outline for structure.html:
+
+1. Comp 484
+   1. Structuring Pages
+   2. Untitled Section
+   3. Conveying meaning through structure
+      1. Sectioning elements
+      2. Document outlines
+        1. W3C Warning
+      3. WAI-ARIA Roles
+
+HTML outline:
+
+<html>
+  <head></head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <article></article>
+      <aside></aside>
+    </main>
+    <footer></footer>
+  </body
+</html>
+
+
+How tags are used:
+
+<article>: Used to encapsulate all of the related <section> and <header> content within the page. A single <header> is used to define what the rest of the article will be about.
+<aside>:   Used for content that is somewhat related to the rest of the page but if removed, the rest of the page would still make sense.
+<nav>:     Used to contain links which navigate the user to other pages within the same website.
+<section>: Used to encapsulate related content about a topic. Tags such as <p>, headings (<h1> - <h6>), <img>, <table>, will be grouped together to create a <section>.
