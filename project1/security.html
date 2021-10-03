@@ -1,0 +1,398 @@
+<!-- 
+  Alan Constantino
+
+  The "other.html" page is the only one that contains all 3 elements and 3 attributes in the same page.
+  In the other pages, the "hidden" attribute is the only one that gets used consistently.
+
+  The elements I used that were not discussed in class are <code>, <cite>, and <kbd>.
+  The attributes I used that were not discussed in class are hidden, dir, translate.
+
+  Elements:
+  <kbd>     - Used to distinguish text as keyboard keys. (other.html)
+  <cite>    - Used to cite from whom I got my quotes from. (other.html)
+  <code>    - Used to signify to the user that this particular piece of "code" can be pasted
+              into their respective Linux terminal. (other.html)
+
+  Attributes:
+  hidden    - Used to hide certain elements from the user. Usually used with JavaScript
+              (used in the footer of all pages to hide a certain <p> element).
+  dir       - Used to inform the browser of which way the text is oriented (i.e. left-to-right
+              or right-to-left)
+  translate - Used to inform the browser whether or not to translate the particular text that
+              has this attribute.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <title>Security</title>
+  </head>
+  <body id="top">
+    <!-- header -->
+    <header role="banner">
+      <nav role="navigation">
+        <ul>
+          <li><a href="./index.html" title="Why">Why</a></li>
+          <li class="active"><a href="./security.html" title="Security">Security</a></li>
+          <li>
+            <a href="./freedom.html" title="Freedom">Freedom</a>
+          </li>
+          <li><a href="./other.html" title="Other">Other</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main content -->
+    <main role="main">
+      <!-- article 1 -->
+      <article role="article">
+        <header>
+          <figure>
+            <img
+              src="./images/pepe-arch.jpg"
+              alt="Happy Pepe using Arch Linux"
+            />
+          </figure>
+          <h1>Why Linux is More Secure than Windows</h1>
+          <p>
+            by
+            <a
+              href="https://www.cbtnuggets.com"
+              target="_blank"
+              title="CBTNuggets"
+              >Microsoft - Team Nuggets</a
+            >
+            (No Author Specified)
+          </p>
+          <hr>
+        </header>
+        <section>
+          <p>
+            When you hear the word "Linux," you may automatically think about
+            the heavy-duty computer users who embraced the technology a couple
+            of decades ago. And that's reasonable, but as CBT Nuggets Linux
+            trainer Shawn Powers says in a recent Trainer Talk, "Linux is just
+            not as scary and mysterious as everybody seems to think."
+          </p>
+          <p>
+            In recent years, the open source operating system has become so
+            user-friendly, anyone can install and work with it. But that isn't
+            the only reason Linux is the right choice for your business. Tech
+            professionals have long chosen Linux for their servers and computers
+            due to its security. But why is Linux considered more secure than
+            other operating systems?
+          </p>
+          <p>
+            Although security often comes down to end-user training regardless
+            of OS, there are some things that make Linux systems more secure
+            than other environments. This is especially true when it comes to
+            malicious software. Here are a few reasons your devices will be more
+            secure with a Linux operating system in place.
+          </p>
+        </section>
+        <section>
+          <h2>Hackers don't typically target Linux</h2>
+          <p>
+            The most cited reason for Linux's safety relates to its low usage
+            numbers. Linux has less than three percent of the market, compared
+            to Windows, which operates on more than 80 percent of all devices.
+            Microsoft and Linux are practically friends now, so that might
+            change a little. (Probably to Microsoft's favor.) For those creating
+            malicious software, it makes more sense to target Windows, because
+            one piece of code will reach the largest segment of the population.
+            This keeps Linux users safer, as even Mac has a larger segment of
+            the market.
+          </p>
+        </section>
+        <section>
+          <h2>
+            It's more difficult to execute a dangerous attachment in the Linux
+            OS
+          </h2>
+          <p>
+            If you've never worked with Linux, you may not realize that it
+            doesn't operate quite the same as Windows or Mac. In those
+            environments, opening a dangerous attachment is simply a matter of
+            double-clicking. Linux is easy to learn with the right resources,
+            but there are extra steps to take before executing a malicious
+            software. On Linux, users need to save the attachment before
+            executing it, and if set up correctly, they would need permissions
+            granted before they could open it. These extra steps can help
+            safeguard a business from the internal user Kill that is so often
+            the cause of security breaches.
+          </p>
+        </section>
+        <section>
+          <h2>Linux does not give users admin access by default</h2>
+          <figure>
+            <img
+              src="./images/arch-no-screen-found.png"
+              alt="No Screen Found Arch Linux Meme"
+            />
+          </figure>
+          <p>
+            In a Windows environment, users are often given a high level of
+            access automatically. This lets them click on links and download
+            files indiscriminately, easily leading to the issues mentioned
+            above. Many users don't have access to the root directories on their
+            computers, which means that even if they do manage to infect their
+            systems, they'll be limited in the damage they can do. Of course,
+            good security practices mean that users shouldn't be clicking those
+            links in the first place. Regardless of what device you use, it
+            ultimately comes down to whether your users employ good security
+            awareness practices — and it's up to you to train them.
+          </p>
+        </section>
+        <section>
+          <h2>Linux has more people looking out for security issues</h2>
+          <p>
+            Although Microsoft has an army of developers working on their OS,
+            the number of developers working on Linux is bigger. And that's one
+            of the biggest reasons to go Linux. With so many people monitoring
+            for issues, it's likely someone will catch a vulnerability long
+            before hackers can target it. Once spotted, Linux users don't have
+            to wait months for Microsoft to finally investigate the issue and
+            fix it. They can repair it themselves, from wherever they are. This
+            not only improves security for the platform, but it also keeps
+            things stable to prevent downtime.
+          </p>
+          <p>
+            Although Linux may be safer, there are things administrators can do
+            to keep systems safe. If a hacker does target your network, these
+            small measures will either prevent it or minimize any damage it
+            might do. This includes encrypting the hard drive of each device,
+            which can be done at the time of installation. A firewall can also
+            help keep your systems safe, and best of all, you have plenty of
+            options available for free. Lastly, make sure you keep all your
+            software up-to-date, just as you would do with any operating system.
+          </p>
+          <p>
+            If you have been thinking about making the switch to Linux, there
+            has never been a better time. With so much training available to
+            help you learn the basics, you'll be able to deploy Linux within
+            your network infrastructure with minimal effort. Once you have Linux
+            in place, you can build from there, boosting the security across
+            your entire network.
+          </p>
+        </section>
+      </article>
+      <!-- article 2 -->
+      <article role="article">
+        <header>
+          <figure>
+            <img
+              src="./images/pepe-windows-sad.jpg"
+              alt="Linux Windows Side by Side"
+            />
+          <h1>Why Linux Is More Secure Than Windows</h1>
+          <p>
+            by
+            <a
+              href="https://www.pcworld.com/article/508291/why_linux_is_more_secure_than_windows.html"
+              target="_blank"
+              title="Katherine Noyes Linux Article"
+              >Katherine Noyes</a
+            >
+          </p>
+          <hr>
+        </header>
+        <section>
+          <p>
+            “Security through obscurity” may be a catchy phrase, but it’s not
+            the only thing that’s catching among Windows users. The expression
+            is intended to suggest that proprietary software is more secure by
+            virtue of its closed nature. If hackers can’t see the code, then
+            it’s harder for them to create exploits for it–or so the thinking
+            goes. Unfortunately for Windows users, that’s just not true–as
+            evidenced by the never-ending parade of patches coming out of
+            Redmond. In fact, one of Linux’s many advantages over Windows is
+            that it is more secure–much more. For small businesses and other
+            organizations without a dedicated staff of security experts, that
+            benefit can be particularly critical. Five key factors underlie
+            Linux’s superior security:
+          </p>
+        </section>
+        <section>
+          <h2>Privileges</h2>
+          <p>
+            Linux systems are by no means infallible, but one of their key
+            advantages lies in the way account privileges are assigned. In
+            Windows, users are generally given administrator access by default,
+            which means they pretty much have access to everything on the
+            system, even its most crucial parts. So, then, do viruses. It’s like
+            giving terrorists high-level government positions.
+          </p>
+          <p>
+            With Linux, on the other hand, users do not usually have such “root”
+            privileges; rather, they’re typically given lower-level accounts.
+            What that means is that even if a Linux system is compromised, the
+            virus won’t have the root access it would need to do damage
+            systemwide; more likely, just the user’s local files and programs
+            would be affected. That can make the difference between a minor
+            annoyance and a major catastrophe in any business setting.
+          </p>
+        </section>
+        <section>
+          <h2>Social Engineering</h2>
+          <p>
+            Viruses and worms often spread by convincing computer users to do
+            something they shouldn’t, like open attachments that carry viruses
+            and worms. This is called social engineering, and it’s all too easy
+            on Windows systems. Just send out an e-mail with a malicious
+            attachment and a subject line like, “Check out these adorable
+            puppies!”–or the porn equivalent–and some proportion of users is
+            bound to click without thinking. The result? An open door for the
+            attached malware, with potentially disastrous consequences
+            organizationwide.
+          </p>
+          <p>
+            Thanks to the fact that most Linux users don’t have root access,
+            however, it’s much harder to accomplish any real damage on a Linux
+            system by getting them to do something foolish. Before any real
+            damage could occur, a Linux user would have to read the e-mail, save
+            the attachment, give it executable permissions and then run the
+            executable. Not very likely, in other words.
+          </p>
+        </section>
+        <section>
+          <h2>The Monoculture Effect</h2>
+          <p>
+            However you want to argue the exact numbers, there’s no doubt that
+            Microsoft Windows still dominates most of the computing world. In
+            the realm of e-mail, so too do Outlook and Outlook Express. And
+            therein lies a problem: It’s essentially a monoculture, which is no
+            better in technology than it is in the natural world. Just as
+            genetic diversity is a good thing in the natural world because it
+            minimizes the deleterious effects of a deadly virus, so a diversity
+            of computing environments helps protect users.
+          </p>
+
+          <p>
+            Fortunately, a diversity of environments is yet another benefit that
+            Linux offers. There’s Ubuntu, there’s Debian, there’s Gentoo, and
+            there are many other distributions. There are also many shells, many
+            packaging systems, and many mail clients; Linux even runs on many
+            architectures beyond just Intel. So, whereas a virus can be targeted
+            squarely at Windows users, since they all use pretty much the same
+            technology, reaching more than a small faction of Linux users is
+            much more difficult. Who wouldn’t want to give their company that
+            extra layer of assurance?
+          </p>
+        </section>
+        <section>
+          <h2>Audience Size</h2>
+          <p>
+            Hand-in-hand with this monoculture effect comes the not particularly
+            surprising fact that the majority of viruses target Windows, and the
+            desktops in your organization are no exception. Millions of people
+            all using the same software make an attractive target for malicious
+            attacks.
+          </p>
+        </section>
+        <section>
+          <h2>How Many Eyeballs</h2>
+          <p>
+            “Linus’ Law”–named for Linus Torvalds, the creator of Linux–holds
+            that, “given enough eyeballs, all bugs are shallow.” What that means
+            is that the larger the group of developers and testers working on a
+            set of code, the more likely any flaws will be caught and fixed
+            quickly. This, in other words, is essentially the polar opposite of
+            the “security through obscurity” argument.
+          </p>
+          <p>
+            With Windows, it’s a limited set of paid developers who are trying
+            to find problems in the code. They adhere to their own set
+            timetables, and they don’t generally tell anyone about the problems
+            until they’ve already created a solution, leaving the door open to
+            exploits until that happens. Not a very comforting thought for the
+            businesses that depend on that technology.
+          </p>
+          <p>
+            In the Linux world, on the other hand, countless users can see the
+            code at any time, making it more likely that someone will find a
+            flaw sooner rather than later. Not only that, but users can even fix
+            problems themselves. Microsoft may tout its large team of paid
+            developers, but it’s unlikely that team can compare with a global
+            base of Linux user-developers around the globe. Security can only
+            benefit through all those extra “eyeballs.”
+          </p>
+          <p>
+            Once again, none of this is to say that Linux is impervious; no
+            operating system is. And there are definitely steps Linux users
+            should take to make their systems as secure as possible, such as
+            enabling a firewall, minimizing the use of root privileges, and
+            keeping the system up to date. For extra peace of mind there are
+            also virus scanners available for Linux, including ClamAV. These are
+            particularly good measures for small businesses, which likely have
+            more at stake than individual users do.
+          </p>
+          <p>
+            It’s also worth noting that security firm Secunia recently declared
+            that Apple products have more security vulnerabilities than any
+            others–including Microsoft’s.
+          </p>
+          <p>
+            Either way, however, when it comes to security, there’s no doubt
+            that Linux users have a lot less to worry about.
+          </p>
+        </section>
+      </article>
+    </main>
+    <!-- footer -->
+    <footer role="contentinfo">
+      <p>
+        I did not write the content on this page, I took it from
+        <a
+          href="https://www.pcworld.com/article/508291/why_linux_is_more_secure_than_windows.html"
+          target="_blank"
+          title="Why Linux Is More Secure Than Windows at PC World"
+          >this</a
+        >
+        and
+        <a
+          href="https://www.cbtnuggets.com/blog/certifications/microsoft/why-linux-is-more-secure-than-windows"
+          target="_blank"
+          title="Why Linux is More Secure than Windows at CBTNuggets"
+          >this</a
+        >
+        article. The content on this page belongs to
+        <a
+          href="https://twitter.com/noyesk?lang=en"
+          target="_blank"
+          title="Katherine Noyes' Twitter"
+          >Katherine Noyes</a
+        >
+        and
+        <a href="https://www.cbtnuggets.com" target="_blank" title="CBTNuggets"
+          >CBTNuggets</a
+        > respectively.
+      </p>
+      <p hidden>
+        <a href="./images/arch-meme.jpg" target="_blank" title="I use Arch meme"
+          >I use Arch btw.</a
+        >
+      </p>
+      <p><a href="#top">&#x2191; Back to Top &#x2191;</a></p>
+    </footer>
+  </body>
+</html>

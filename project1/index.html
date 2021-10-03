@@ -1,25 +1,324 @@
+<!-- 
+  Alan Constantino
+
+  The "other.html" page is the only one that contains all 3 elements and 3 attributes in the same page.
+  In the other pages, the "hidden" attribute is the only one that gets used consistently.
+
+  The elements I used that were not discussed in class are <code>, <cite>, and <kbd>.
+  The attributes I used that were not discussed in class are hidden, dir, translate.
+
+  Elements:
+  <kbd>     - Used to distinguish text as keyboard keys. (other.html)
+  <cite>    - Used to cite from whom I got my quotes from. (other.html)
+  <code>    - Used to signify to the user that this particular piece of "code" can be pasted
+              into their respective Linux terminal. (other.html)
+
+  Attributes:
+  hidden    - Used to hide certain elements from the user. Usually used with JavaScript
+              (used in the footer of all pages to hide a certain <p> element).
+  dir       - Used to inform the browser of which way the text is oriented (i.e. left-to-right
+              or right-to-left)
+  translate - Used to inform the browser whether or not to translate the particular text that
+              has this attribute.
+ -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <title>Why Switch To Linux?</title>
+  </head>
+  <body id="#top">
+    <!-- header -->
     <header role="banner">
-        <nav role="navigation">
-            <ul>
-                <li><a href="./pageA.html" title="pageA">pageA.html</a></li>
-                <li><a href="./pageB.html" title="pageB">pageB.html</a></li>
-                <li><a href="./pageC.html" title="pageC">pageC.html</a></li>
-            </ul>
-        </nav>
+      <nav role="navigation">
+        <ul>
+          <li class="active"><a href="./index.html" title="Why">Why</a></li>
+          <li><a href="./security.html" title="Security">Security</a></li>
+          <li>
+            <a href="./freedom.html" title="Freedom">Freedom</a>
+          </li>
+          <li><a href="./other.html" title="Other">Other</a></li>
+        </ul>
+      </nav>
     </header>
+    <!-- main content -->
     <main role="main">
-        <h1>index.html</h1>
+      <!-- article 1 -->
+      <article role="article">
+        <header>
+          <figure>
+            <img
+              src="./images/arch-meme-2.jpg"
+              alt="Linux Windows Side by Side"
+            />
+          </figure>
+          <h1>11 Reasons to switch from Windows to Linux</h1>
+          <p>
+            by
+            <a
+              href="https://itsfoss.com/author/abhishek/"
+              target="_blank"
+              title="FOSS Abhishek Prakash"
+              >Abhishek Prakash</a
+            >
+          </p>
+          <hr />
+        </header>
+        <section>
+          <p>
+            You’re probably using Windows or macOS if you’re reading this. No
+            matter what you’re using currently, you will find a lot of use-cases
+            where Linux is better than Windows and also cases where it’s better
+            than Mac. In case you’re new to all this and confused about what
+            “Linux” actually is — I recommend you to first read one of our
+            previous articles to know what Linux is. Now that I assume you know
+            what Linux is — I must make it clear that I’m not leaning towards
+            the statement — “Linux or nothing”. But, if you haven’t used a Linux
+            distro, you’re missing out on a lot of good things. So, if you’re
+            planning to give Linux a try — there are several reasons to do so.
+            In this article, I’m going to highlight eleven reasons why you
+            should Linux and never look back.
+          </p>
+        </section>
+        <section>
+          <h2>1. It’s free: No license, no fees</h2>
+          <p>
+            Linux is completely free to use unlike Microsoft Windows or macOS.
+            You don’t need to purchase any kind of licenses (or shell out cash
+            for specific hardware) to use it for personal or commercial use.
+            With a couple of hundred bucks saved, you can use it to upgrade your
+            hardware, purchase premium services or anything better that you can
+            think of. Isn’t that exciting?
+          </p>
+        </section>
+        <section>
+          <h2>2. More Secure: Antivirus not required</h2>
+          <p>
+            To be honest, every platform has its share of issues. However, Linux
+            is one of the most secure platforms when compared to macOS and
+            Windows. With a big community of developers/users, even if someone
+            finds a problem, it gets fixed quickly. However, sometimes with
+            macOS and Windows, I’ve noticed that it takes a lot of time for them
+            to fix the issues in a future update. And, of course, you don’t
+            necessarily need an antivirus program on Linux. So, you also save on
+            yearly/monthly subscriptions for Antivirus programs on
+            Windows/macOS. Yes, one could argue that the market share of Linux
+            on Desktop is lower than Windows/macOS. So, attackers don’t always
+            target Linux users and hence, there aren’t any widespread security
+            issues being spotted. Even if that’s true (let’s assume), would you
+            prefer to use something that’s safer to use or something that’s a
+            magnet to virus, malware, and adware? I’ll respect your decision
+            with that.
+          </p>
+        </section>
+        <section>
+          <h2>3. Compatible with old and low-end hardware</h2>
+          <p>
+            Microsoft’s latest Windows 10 doesn’t work very well with older
+            computers and you know that. macOS is a different story because you
+            don’t really have the option of choosing your own hardware — so
+            there’s nothing to talk about here. But, Linux is easily compatible
+            with low-end hardware and IoT devices as well. In fact, you will
+            find some specific lightweight Linux distros tailored for old
+            computers. Not just limited to that, you can also fire up a Linux
+            distro on a Raspberry Pi or its alternatives to set up a basic
+            system or work on DIY project. If you still don’t believe me, I
+            recommend you to check out the best Raspberry Pi OS available out
+            there.
+          </p>
+        </section>
+        <section>
+          <h2>4. It’s not that complicated to use</h2>
+          <p>
+            With Linux distributions like Pop!_OS, Ubuntu, Manjaro and many
+            others, Linux is easier than ever. You can get almost anything done
+            using a GUI (Graphical User Interface) and you don’t need to type
+            any commands. Yes, you can do a lot of things if you know how to use
+            the terminal quickly. And, you might come across some distributions
+            that are meant for experienced Linux users. But, you will find
+            plenty of documentations/help resources online to follow without
+            relying on anyone.
+          </p>
+        </section>
+        <section>
+          <h2>5. Drivers installed automatically</h2>
+          <p>
+            Drivers scene has improved on Windows 10 as well but it has always
+            been better on Linux. Almost all drivers are automatically installed
+            on your system. If there are more than one drivers available, you
+            can choose to install the one you want.
+          </p>
+        </section>
+        <section>
+          <h2>6. Customize the looks of your desktop as much you like</h2>
+          <p>
+            Starting from the icon pack to the application window, you can
+            change the look and feel of a Linux distro in minutes. In case you
+            want to explore, you can refer to our list of the best GNOME themes
+            and best icons for your Linux distro.Not just limited to theme, you
+            can also change the desktop environment of your distro to KDE,
+            GNOME, MATE, and others.
+          </p>
+          <p>
+            A Desktop Environment basically changes the overall user interface
+            of your OS. You can take a look the best desktop environments
+            available to know what I’m referring to. In case you want a
+            Windows-like interface on Linux, fear not, you have plenty of
+            Windows-like distributions that you can install.
+          </p>
+        </section>
+        <section>
+          <h2>7. Software center to get all apps in one place</h2>
+          <p>
+            It’s easy to install software on Linux using the software center (or
+            the app center or the package manager). The collection of software
+            available is usually huge and actively maintained. This is not
+            something exclusive to Linux, you can find Microsoft Store for
+            Windows as well. But, the point is, it’s not difficult to find and
+            install applications on Linux.
+          </p>
+        </section>
+        <section>
+          <h2>
+            8. Hassle-free updates: Update your system as well as installed
+            software
+          </h2>
+          <p>
+            Linux has got a strong track record of hassle-free updates unlike
+            Windows. It not only updates your system but it also updates
+            installed software. How cool is that! Not to mention, I have to
+            re-configure my audio configuration every time a Windows update
+            arrives.
+          </p>
+          <p>
+            In a nutshell, with every Windows update, something goes wrong. If
+            you’re lucky enough, you may not have noticed any issues but it’s a
+            mess with Windows updates. Also, the most annoying thing with
+            Windows is its background update download and later forcing you to
+            update your system. Wait, you also have to reboot every time you get
+            a Window/macOS update? That can be inconvenient.
+          </p>
+          <p>
+            Fortunately, on Linux, you don’t necessarily need to reboot and the
+            updates are mostly error-free. And, that’s why Linux is the perfect
+            choice for enterprises and servers. In fact, there’s an entertaining
+            video by the fine folks at SUSE which highlights “don’t reboot it,
+            just patch it”.
+          </p>
+        </section>
+        <section>
+          <h2>9. Gaming on Linux</h2>
+          <p>
+            In the past, one of the major constraints while switching to Linux
+            was gaming. While Linux had some native games, thanks to Steam Play,
+            now you can play ‘Windows only’ games on Linux.You may not be able
+            to play “every” Windows game on Linux yet. However, you can enjoy
+            most of the latest AAA games and older titles without any issues.
+            You can read more about gaming on Linux to see all the options to
+            game on a Linux system.
+          </p>
+        </section>
+        <section>
+          <h2>10. Community support</h2>
+          <p>
+            Probably the best thing about Linux is the community of users
+            itself. Not just blogs/publications like ours — but you can interact
+            with people to get help on numerous forums. You will find a lot of
+            helpful users online who will go an extra mile to help you out. So,
+            you’re not alone, we’re a family here! Well, we also have our
+            <a
+              href="https://itsfoss.community/"
+              target="_blank"
+              title="FOSS Community Forums"
+              >own Linux forum</a
+            >
+            if you need any help.
+          </p>
+        </section>
+        <section>
+          <h2>11. Linux is Open Source</h2>
+          <p>
+            If you like to have transparency on what you use on a day-to-day
+            basis, Linux (in general) is the perfect choice to have. Unlike
+            Windows/macOS, Linux relies on the concept of
+            <a
+              href="https://en.wikipedia.org/wiki/Open_source"
+              target="_blank"
+              title="https://en.wikipedia.org/wiki/Open_source"
+              >open-source software</a
+            >. So, you can easily review the source code of your operating
+            system to see how it works or how it handles your data. For
+            instance, you get a car but you’re not allowed to see what’s inside,
+            wouldn’t you be annoyed? That’s how Windows/macOS works — but with
+            Linux, you are allowed to see what’s inside without any
+            restrictions.
+          </p>
+          <p>
+            Fret not, if you don’t have the required expertise to understand the
+            source code, there are thousands of developers/contributors who
+            constantly work on fixing the issues (if there’s anything at all).
+            You don’t have to trust a company, right? So, with an open-source
+            community, it’s the people/users who’re largely responsible for
+            fixing issues or help to improve it.
+          </p>
+        </section>
+        <section>
+          <h2>Wrapping Up</h2>
+          <p>
+            Linux is something that anyone ranging from an average Joe to a
+            system admin can utilize. So, if you find these reasons compelling
+            enough, make the switch! Personally, I’ve been using Linux for
+            several years now and I’ve never looked back. What about you? Feel
+            free to share your thoughts in the comments below.
+          </p>
+        </section>
+      </article>
     </main>
-    <footer role="contentinfo"></footer>
-</body>
+    <!-- footer -->
+    <footer role="contentinfo">
+      <p>
+        I did not write the content on this page, I took it from
+        <a
+          href="https://itsfoss.com/reasons-switch-linux-windows-xp/"
+          target="_blank"
+          title="11 Reasons Why You Should Switch To Linux"
+          >this</a
+        >
+        article. The content on this page belongs to
+        <a
+          href="https://itsfoss.com/author/abhishek/"
+          target="_blank"
+          title="FOSS Abhishek Prakash"
+          >Abhishek Prakash</a
+        >.
+      </p>
+      <p hidden>
+        <a href="./images/arch-meme.jpg" target="_blank" title="I use Arch meme"
+          >I use Arch btw.</a
+        >
+      </p>
+      <p><a href="#top">&#x2191; Back to Top &#x2191;</a></p>
+    </footer>
+  </body>
 </html>

