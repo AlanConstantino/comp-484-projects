@@ -1,0 +1,82 @@
+/* Color Palette
+# - color 1 - #E7E0C9
+# - color 2 - #C1CFC0
+# - color 3 - #6B7AA1
+# - color 4 - #7E8A97
+*/
+
+/* Font faces */
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+}
+
+/* Global styles */
+header,
+footer,
+section,
+body {
+  padding: 3rem;
+}
+
+body,
+h3 a {
+  font-family: "Poppins", "Noto Sans" Arial, Helvetica;
+  background: #85858567;
+}
+
+li,
+a,
+p {
+  font-family: "Noto Sans", "Poppins" Arial, Helvetica;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+address p {
+  font-family: "Poppins", "Noto Sans", Arial;
+  font-weight: 200;
+}
+
+/* Miscellaneous classes */
+.date {
+  font-style: oblique;
+}
+
+/* Header & Footer */
+header,
+footer {
+  background-color: #e7e0c9;
+}
+
+/* Work Experience */
+.work {
+  background-color: #c1cfc0;
+}
+
+/* Education */
+.education {
+  background-color: #6b7aa1;
+}
+
+/* Projects */
+.projects,
+.projects a {
+  background-color: #7e8a97;
+}
