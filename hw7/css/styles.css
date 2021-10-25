@@ -22,11 +22,18 @@
 }
 
 /* Global styles */
-header,
-footer,
-section,
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  padding: 3rem;
+  margin: 0;
 }
 
 body,
@@ -42,27 +49,59 @@ p {
 }
 
 h1 {
+  margin: 0;
   font-size: 2.5rem;
 }
 
 h2 {
+  margin: 0;
+  margin-top: 0;
   font-size: 1.5rem;
 }
 
-address p {
-  font-family: "Poppins", "Noto Sans", Arial;
-  font-weight: 200;
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
 }
 
-/* Miscellaneous classes */
-.date {
+.contact-info a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+.address {
+  font-family: "Poppins", "Noto Sans", Arial;
   font-style: oblique;
+  font-weight: 200;
 }
 
 /* Header & Footer */
 header,
 footer {
   background-color: #e7e0c9;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
 }
 
 /* Work Experience */
@@ -79,4 +118,9 @@ footer {
 .projects,
 .projects a {
   background-color: #7e8a97;
+}
+
+/* Miscellaneous */
+.date {
+  font-style: oblique;
 }
