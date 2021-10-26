@@ -144,6 +144,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  background-attachment: fixed;
 }
 
 .alpha-wrap {
