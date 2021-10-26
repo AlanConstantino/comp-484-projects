@@ -1,0 +1,172 @@
+/* Color Palette
+# - color 1 - #E7E0C9
+# - color 2 - #C1CFC0
+# - color 3 - #6B7AA1
+# - color 4 - #7E8A97
+*/
+
+/* Font faces */
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+}
+
+/* Global styles */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 75vh;
+  /* padding-top: 2.5rem; */
+}
+
+body,
+h3 a {
+  font-family: "Poppins", "Noto Sans" Arial, Helvetica;
+  background: #85858567;
+}
+
+li,
+a,
+p {
+  font-family: "Noto Sans", "Poppins" Arial, Helvetica;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.contact-info a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+.address {
+  font-family: "Poppins", "Noto Sans", Arial;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Header & Footer */
+header,
+footer {
+  background-color: #e7e0c9;
+}
+
+header {
+  padding-top: 3rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #a1a1a1;
+  text-align: center;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar a:hover {
+  background-color: #6b7aa1;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Work Experience */
+#work {
+  padding-top: 1.5rem;
+  background-color: #c1cfc0;
+}
+
+/* Education */
+#education {
+  color: #000000;
+  background-color: #6b7aa1;
+  background-image: url("../images/csun.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.alpha-wrap {
+  height: 100%;
+  padding-top: 1.5rem;
+  background-color: rgb(107, 122, 161, 0.85);
+}
+
+/* Projects */
+#projects {
+  padding-top: 1.5rem;
+  background-color: #7e8a97;
+}
+
+#projects a {
+  background-color: #7e8a97;
+}
+
+#projects .content-wrap {
+  margin-bottom: -75px;
+}
+
+/* Miscellaneous */
+.date {
+  font-style: oblique;
+}
