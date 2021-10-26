@@ -150,7 +150,10 @@ footer {
 .alpha-wrap {
   height: 100%;
   padding-top: 1.5rem;
-  background-color: rgb(107, 122, 161, 0.85);
+  background: linear-gradient(
+    rgb(107, 122, 161, 0.85) 25%,
+    rgba(122, 104, 104, 0.85) 100%
+  );
 }
 
 /* Projects */
