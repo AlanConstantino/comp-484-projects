@@ -1,13 +1,13 @@
 class Pokemon {
-    constructor(name = null, weight = 0, happiness = 0, imgSrc = './pokemon/charmander.gif') {
-        this.name = name;
+    constructor({name = "", weight = 0, happiness = 0, imgSrc = ""}, evolutions = []) {
+        this.name = name.charAt(0).toUpperCase() + name.slice(1);
         this.initWeight = weight;
         this.weight = weight;
         this.happiness = happiness;
         this.img = imgSrc;
-        this.isEvolutionTime = false;
+        this.evolutions = evolutions;
         this.currentEvolutionStage = 0;
-        this.nextEvolutionStage = 1;
+        this.maxEvolutions = 2;
     }
 
     increaseWeight(value = 1) {
@@ -22,26 +22,29 @@ class Pokemon {
 
     increaseHappiness(value = 1) {
         if (this.happiness >= 100) {
-            this.isEvolutionTime = true;
             return;
         }
 
         this.happiness += value;
     }
 
-    decreaseHappiness(value) {
-        if (this.happiness != 0) {
+    decreaseHappiness(value = 1) {
+        if (this.happiness - value <= 0) {
+            this.happiness = 0;
+        } else {
             this.happiness -= value;
         }
     }
 
-    evolve(imgSrc) {
-        if (this.isEvolutionTime && this.happiness >= 100) {
-            this.img = imgSrc;
+    evolve() {
+        if (this.happiness >= 100 && this.maxEvolutions !== this.currentEvolutionStage) {
             this.currentEvolutionStage++;
-            this.nextEvolutionStage++;
-            this.isEvolutionTime = false;
-            this.happiness = 0;
+            const {name, weight, happiness, imgSrc} = this.evolutions[this.currentEvolutionStage];
+            this.name = name.charAt(0).toUpperCase() + name.slice(1);
+            this.weight = weight;
+            this.initWeight = weight;
+            this.happiness = happiness;
+            this.img = imgSrc;
         }
     }
 }
@@ -52,24 +55,13 @@ const util = {
         document.getElementById(id).textContent = value;
     },
 
-    initValuesDom: ({name, weight, happiness}) => {
-        document.getElementById('name').textContent = name;
-        document.getElementById('weight').textContent = weight;
-        document.getElementById('happiness').textContent = happiness;
-    },
-
     updatePokemonImage: (srcPath) => {
         document.getElementById('pokemon').src = srcPath;
+        document.getElementById('pokemon').classList.remove('hide');
     },
 };
 
-const fireStarter = [
-    {name: 'charmander', weight: 19},
-    {name: 'charmeleon', weight: 42},
-    {name: 'charizard', weight: 200},
-];
-
-const pet_info = new Pokemon('Charmander', 19, 0, './pokemon/charmander.gif');
+let pet_info = null;
 
 // increase weight and increase happiness
 function onClickEat() {
@@ -97,9 +89,9 @@ function onClickExercise() {
 
 // evolves pokemon by updating image, reseting its happiness and updating its weight
 function onClickEvolve() {
-    pet_info.evolve(`./pokemon/${fireStarter[pet_info.nextEvolutionStage].name}.gif`);
-    pet_info.weight = fireStarter[pet_info.currentEvolutionStage].weight
+    pet_info.evolve();
     util.updatePokemonImage(pet_info.img);
+    util.updateDomValue('name', pet_info.name);
     util.updateDomValue('weight', pet_info.weight);
     util.updateDomValue('happiness', pet_info.happiness);
 }
@@ -116,5 +108,87 @@ play.addEventListener('click', onClickPlay);
 exercise.addEventListener('click', onClickExercise);
 evolve.addEventListener('click', onClickEvolve);
 
-// initializes pokemon values on dom
-util.initValuesDom(pet_info);
+// pet selection
+const petSelectionContainer = document.getElementById('pet-selection-container');
+const charmanderChoice = document.getElementById('charmander');
+const squirtleChoice = document.getElementById('squirtle');
+const bulbasaurChoice = document.getElementById('bulbasaur');
+
+// dom elements hidden by default
+const buttonContainer = document.getElementById('button-container');
+const petInfoContainer = document.getElementById('pet-info-container');
+
+// initial states for each evoltion of each starter pokemon
+const fireStarterEvolutions = [
+    {name: 'charmander', weight: 19, happiness: 0, imgSrc: './pokemon/charmander.gif'},
+    {name: 'charmeleon', weight: 42, happiness: 0, imgSrc: './pokemon/charmeleon.gif'},
+    {name: 'charizard', weight: 200, happiness: 0, imgSrc: './pokemon/charizard.gif'},
+];
+
+const waterStarterEvolutions = [
+    {name: 'squirtle', weight: 20, happiness: 0, imgSrc: './pokemon/squirtle.gif'},
+    {name: 'wartortle', weight: 50, happiness: 0, imgSrc: './pokemon/wartortle.gif'},
+    {name: 'blastoise', weight: 189, happiness: 0, imgSrc: './pokemon/blastoise.gif'},
+];
+
+const grassStarterEvolutions = [
+    {name: 'bulbasaur', weight: 15, happiness: 0, imgSrc: './pokemon/bulbasaur.gif'},
+    {name: 'ivysaur', weight: 28, happiness: 0, imgSrc: './pokemon/ivysaur.gif'},
+    {name: 'venusaur', weight: 221, happiness: 0, imgSrc: './pokemon/venusaur.gif'},
+];
+
+function onClickCharmanderChoice() {
+    petSelectionContainer.style.display = 'none';
+    pet_info = new Pokemon(fireStarterEvolutions[0], fireStarterEvolutions);
+    util.updatePokemonImage(pet_info.img);
+    util.updateDomValue('name', pet_info.name);
+    util.updateDomValue('weight', pet_info.weight);
+    util.updateDomValue('happiness', pet_info.happiness);
+    buttonContainer.classList.remove('hide');
+    petInfoContainer.classList.remove('hide');
+}
+
+function onClickBulbasaurChoice() {
+    petSelectionContainer.style.display = 'none';
+    pet_info = new Pokemon(grassStarterEvolutions[0], grassStarterEvolutions);
+    util.updatePokemonImage(pet_info.img);
+    util.updateDomValue('name', pet_info.name);
+    util.updateDomValue('weight', pet_info.weight);
+    util.updateDomValue('happiness', pet_info.happiness);
+    buttonContainer.classList.remove('hide');
+    petInfoContainer.classList.remove('hide');
+}
+
+function onClickSquirtleChoice() {
+    petSelectionContainer.style.display = 'none';
+    pet_info = new Pokemon(waterStarterEvolutions[0], waterStarterEvolutions);
+    util.updatePokemonImage(pet_info.img);
+    util.updateDomValue('name', pet_info.name);
+    util.updateDomValue('weight', pet_info.weight);
+    util.updateDomValue('happiness', pet_info.happiness);
+    buttonContainer.classList.remove('hide');
+    petInfoContainer.classList.remove('hide');
+}
+
+charmanderChoice.addEventListener('click', onClickCharmanderChoice);
+squirtleChoice.addEventListener('click', onClickSquirtleChoice);
+bulbasaurChoice.addEventListener('click', onClickBulbasaurChoice);
+
+function onClickPokeballPet() {
+    if (pet_info.img.includes('back')) {
+        pet_info.img = `./pokemon/${pet_info.name.toLowerCase()}.gif`;
+    } else {
+        pet_info.img = `./pokemon/${pet_info.name.toLowerCase()}-back.gif`;
+    }
+
+    util.updatePokemonImage(pet_info.img);
+}
+
+const pokeballPet = document.getElementById('pokemon');
+pokeballPet.addEventListener('click', onClickPokeballPet);
+
+// setInterval(() => {
+//     const name = pet_info.name.toLowerCase();
+//     pet_info.img = `./pokemon/${name}-mad.gif`
+//     util.updatePokemonImage(pet_info.img);
+// }, 10000);
