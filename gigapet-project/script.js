@@ -45,6 +45,9 @@ class Pokemon {
             this.initWeight = weight;
             this.happiness = happiness;
             this.img = imgSrc;
+            return true;
+        } else {
+            return false;
         }
     }
 }
@@ -59,42 +62,23 @@ const util = {
         document.getElementById('pokemon').src = srcPath;
         document.getElementById('pokemon').classList.remove('hide');
     },
+
+    changeColorTemporarily: (id, cssClass) => {
+        document.getElementById(id).classList.add(cssClass);
+        setTimeout(() => {
+            document.getElementById(id).classList.remove(cssClass);
+        }, 200);
+    },
+
+    playAudio: (id = 'audio', volume = 0.5, audioSrc) => {
+        const audio = document.getElementById(id);
+        audio.volume = volume;
+        audio.src = audioSrc;
+        audio.play();
+    },
 };
 
 let pet_info = null;
-
-// increase weight and increase happiness
-function onClickEat() {
-    pet_info.increaseWeight(2);
-    pet_info.increaseHappiness(10);
-    util.updateDomValue('weight', pet_info.weight);
-    util.updateDomValue('happiness', pet_info.happiness);
-}
-
-// increase happiness and decrease weight
-function onClickPlay() {
-    pet_info.decreaseWeight(1);
-    pet_info.increaseHappiness(1);
-    util.updateDomValue('weight', pet_info.weight);
-    util.updateDomValue('happiness', pet_info.happiness);
-}
-
-// decrease weight and decrease happiness
-function onClickExercise() {
-    pet_info.decreaseWeight(2);
-    pet_info.decreaseHappiness(2);
-    util.updateDomValue('weight', pet_info.weight);
-    util.updateDomValue('happiness', pet_info.happiness);
-}
-
-// evolves pokemon by updating image, reseting its happiness and updating its weight
-function onClickEvolve() {
-    pet_info.evolve();
-    util.updatePokemonImage(pet_info.img);
-    util.updateDomValue('name', pet_info.name);
-    util.updateDomValue('weight', pet_info.weight);
-    util.updateDomValue('happiness', pet_info.happiness);
-}
 
 // action buttons for pet
 const eat = document.getElementById('eat');
@@ -118,6 +102,7 @@ const bulbasaurChoice = document.getElementById('bulbasaur');
 const buttonContainer = document.getElementById('button-container');
 const petInfoContainer = document.getElementById('pet-info-container');
 const pokeballPet = document.getElementById('pokemon');
+// const audio = document.getElementById('audio');
 
 // initial states for each evoltion of each starter pokemon
 const fireStarterEvolutions = [
@@ -144,6 +129,48 @@ squirtleChoice.addEventListener('click', onClickSquirtleChoice);
 bulbasaurChoice.addEventListener('click', onClickBulbasaurChoice);
 pokeballPet.addEventListener('click', onClickPokeballPet);
 
+// increase weight and increase happiness
+function onClickEat() {
+    pet_info.increaseWeight(2);
+    pet_info.increaseHappiness(10);
+    util.updateDomValue('weight', pet_info.weight);
+    util.updateDomValue('happiness', pet_info.happiness);
+    util.changeColorTemporarily('weight', 'increase');
+    util.changeColorTemporarily('happiness', 'increase');
+}
+
+// increase happiness and decrease weight
+function onClickPlay() {
+    pet_info.decreaseWeight(1);
+    pet_info.increaseHappiness(1);
+    util.updateDomValue('weight', pet_info.weight);
+    util.updateDomValue('happiness', pet_info.happiness);
+    util.changeColorTemporarily('weight', 'decrease');
+    util.changeColorTemporarily('happiness', 'increase');
+}
+
+// decrease weight and decrease happiness
+function onClickExercise() {
+    pet_info.decreaseWeight(2);
+    pet_info.decreaseHappiness(2);
+    util.updateDomValue('weight', pet_info.weight);
+    util.updateDomValue('happiness', pet_info.happiness);
+    util.changeColorTemporarily('weight', 'decrease');
+    util.changeColorTemporarily('happiness', 'decrease');
+}
+
+// evolves pokemon by updating image, reseting its happiness and updating its weight
+function onClickEvolve() {
+    if (pet_info.evolve()) {
+        util.updatePokemonImage(pet_info.img);
+        util.updateDomValue('name', pet_info.name);
+        util.updateDomValue('weight', pet_info.weight);
+        util.updateDomValue('happiness', pet_info.happiness);
+        util.playAudio('audio', 0.5, './sounds/level-up-sound.mp3');
+    }
+}
+
+// user selects charmander pokemon
 function onClickCharmanderChoice() {
     petSelectionContainer.style.display = 'none';
     pet_info = new Pokemon(fireStarterEvolutions[0], fireStarterEvolutions);
@@ -155,6 +182,7 @@ function onClickCharmanderChoice() {
     petInfoContainer.classList.remove('hide');
 }
 
+// user selects bulbasaur pokemon
 function onClickBulbasaurChoice() {
     petSelectionContainer.style.display = 'none';
     pet_info = new Pokemon(grassStarterEvolutions[0], grassStarterEvolutions);
@@ -166,6 +194,7 @@ function onClickBulbasaurChoice() {
     petInfoContainer.classList.remove('hide');
 }
 
+// user selects squirtle pokemon
 function onClickSquirtleChoice() {
     petSelectionContainer.style.display = 'none';
     pet_info = new Pokemon(waterStarterEvolutions[0], waterStarterEvolutions);
