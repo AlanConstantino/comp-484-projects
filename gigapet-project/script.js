@@ -114,9 +114,10 @@ const charmanderChoice = document.getElementById('charmander');
 const squirtleChoice = document.getElementById('squirtle');
 const bulbasaurChoice = document.getElementById('bulbasaur');
 
-// dom elements hidden by default
+// dom elements
 const buttonContainer = document.getElementById('button-container');
 const petInfoContainer = document.getElementById('pet-info-container');
+const pokeballPet = document.getElementById('pokemon');
 
 // initial states for each evoltion of each starter pokemon
 const fireStarterEvolutions = [
@@ -136,6 +137,12 @@ const grassStarterEvolutions = [
     {name: 'ivysaur', weight: 28, happiness: 0, imgSrc: './pokemon/ivysaur.gif'},
     {name: 'venusaur', weight: 221, happiness: 0, imgSrc: './pokemon/venusaur.gif'},
 ];
+
+// defining event listeners and functions to get triggered
+charmanderChoice.addEventListener('click', onClickCharmanderChoice);
+squirtleChoice.addEventListener('click', onClickSquirtleChoice);
+bulbasaurChoice.addEventListener('click', onClickBulbasaurChoice);
+pokeballPet.addEventListener('click', onClickPokeballPet);
 
 function onClickCharmanderChoice() {
     petSelectionContainer.style.display = 'none';
@@ -170,10 +177,6 @@ function onClickSquirtleChoice() {
     petInfoContainer.classList.remove('hide');
 }
 
-charmanderChoice.addEventListener('click', onClickCharmanderChoice);
-squirtleChoice.addEventListener('click', onClickSquirtleChoice);
-bulbasaurChoice.addEventListener('click', onClickBulbasaurChoice);
-
 function onClickPokeballPet() {
     if (pet_info.img.includes('back')) {
         pet_info.img = `./pokemon/${pet_info.name.toLowerCase()}.gif`;
@@ -183,9 +186,6 @@ function onClickPokeballPet() {
 
     util.updatePokemonImage(pet_info.img);
 }
-
-const pokeballPet = document.getElementById('pokemon');
-pokeballPet.addEventListener('click', onClickPokeballPet);
 
 // setInterval(() => {
 //     const name = pet_info.name.toLowerCase();
