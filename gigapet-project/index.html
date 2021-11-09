@@ -10,24 +10,41 @@
   <body>
     <main>
       <section>
-        <div id="container">
-          <h1>Poké-gatchi</h1>
-          <div class="pet-container">
-            <!-- <img src="./pokemon/tamagotchi.png" alt="Tomogatchi Shell" /> -->
-            <img
-              id="pokemon"
-              src="./pokemon/charmander.gif"
-              alt="Tomogatchi Shell"
-            />
+        <div class="container">
+          <div id="pet-selection-container" class="pet-selection-container">
+            <h2 id="title">Select your Poké-gatchi</h2>
+            <div class="pets">
+              <img
+                id="charmander"
+                class="pokeball"
+                src="./pokemon/charmander.gif"
+                alt="Charmander"
+              />
+              <img
+                id="bulbasaur"
+                class="pokeball"
+                src="./pokemon/bulbasaur.gif"
+                alt="Bulbasaur"
+              />
+              <img
+                id="squirtle"
+                class="pokeball"
+                src="./pokemon/squirtle.gif"
+                alt="Squirtle"
+              />
+            </div>
+          </div>
+          <div id="pet-info-container" class="hide pet-info-container">
+            <img id="pokemon" alt="Pokemon pet image" class="hide pokeball" />
             <p>Name: <span id="name">??</span></p>
             <p>Weight: <span id="weight">??</span></p>
             <p>Happiness: <span id="happiness">??</span></p>
           </div>
-          <div class="button-container">
-            <button id="eat">Eat</button>
-            <button id="play">Play</button>
-            <button id="exercise">Exercise</button>
-            <button id="evolve">Evolve</button>
+          <div id="button-container" class="hide button-container">
+            <button id="eat" class="button">Eat</button>
+            <button id="play" class="button">Play</button>
+            <button id="exercise" class="button">Exercise</button>
+            <button id="evolve" class="button">Evolve</button>
           </div>
         </div>
       </section>
