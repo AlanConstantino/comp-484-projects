@@ -94,6 +94,7 @@ const eat = document.getElementById('eat');
 const play = document.getElementById('play');
 const exercise = document.getElementById('exercise');
 const evolve = document.getElementById('evolve');
+const shiny = document.getElementById('shiny');
 
 // initializing event listeners to their respective functions
 eat.addEventListener('click', onClickEat);
@@ -188,6 +189,7 @@ function onClickCharmanderChoice() {
     util.updateDomValue('name', pet_info.name);
     util.updateDomValue('weight', pet_info.weight);
     util.updateDomValue('happiness', pet_info.happiness);
+    util.updateDomValue('shiny', pet_info.shiny);
     buttonContainer.classList.remove('hide');
     petInfoContainer.classList.remove('hide');
 }
@@ -201,6 +203,7 @@ function onClickBulbasaurChoice() {
     util.updateDomValue('name', pet_info.name);
     util.updateDomValue('weight', pet_info.weight);
     util.updateDomValue('happiness', pet_info.happiness);
+    util.updateDomValue('shiny', pet_info.shiny);
     buttonContainer.classList.remove('hide');
     petInfoContainer.classList.remove('hide');
 }
@@ -214,6 +217,7 @@ function onClickSquirtleChoice() {
     util.updateDomValue('name', pet_info.name);
     util.updateDomValue('weight', pet_info.weight);
     util.updateDomValue('happiness', pet_info.happiness);
+    util.updateDomValue('shiny', pet_info.shiny);
     buttonContainer.classList.remove('hide');
     petInfoContainer.classList.remove('hide');
 }
