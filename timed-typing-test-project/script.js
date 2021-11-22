@@ -28,7 +28,7 @@ const highscores = {
     third: [],
 };
 let errorsCounter = 0;
-let wpmCounter = 0;
+let charactersTyped = 0;
 
 const text = [
     [
@@ -102,11 +102,17 @@ function selectRandomText() {
     return text[Math.floor(Math.random() * text.length)];
 }
 
-
-// let tempProgress = 0;
+// checks original text with user typed text
 function checkText(typedText, text) {
     const original = [...text];
     const typed = [...typedText];
+    const elapsedTime = (time.minutes * 60) + time.seconds;
+
+    charactersTyped++;
+
+    // A 'word' is defined as 5 characters
+    // wpm definition: https://nitrotype.fandom.com/wiki/Words_per_minute
+    wpm.textContent = Math.round(((charactersTyped / 5) / elapsedTime) * 60);
 
     progress.textContent = ((typed.length / original.length) * 100).toFixed(2);
 
@@ -125,16 +131,10 @@ function checkText(typedText, text) {
         }
     }
     
-    // if backspace key is not pressed and border color is red
-    // then you know you have an error
+    // if backspace key is not pressed and border color is red, then error is present
     if ((window.event.key !== 'Backspace') && testWrapper.style.borderColor === 'red') {
         errorsCounter++;
     }
-
-    // console.log(window.event);
-    // if (window.event.key === ' ') {
-    //     console.log('hit space bar');
-    // }
 
     errors.textContent = errorsCounter;
 }
@@ -150,11 +150,12 @@ function convertStringTimeToIntTime(stringTime) {
 
 // updates the high score DOM board
 function updateHighScores() {
-    topThreeScores[0].textContent = highscores.first[0] || '00:00:00';
-    topThreeScores[1].textContent = highscores.second[0] || '00:00:00';
-    topThreeScores[2].textContent = highscores.third[0] || '00:00:00';
+    topThreeScores[0].textContent = (highscores.first[0] || '00:00:00');
+    topThreeScores[1].textContent = (highscores.second[0] || '00:00:00');
+    topThreeScores[2].textContent = (highscores.third[0] || '00:00:00');
 }
 
+// determines high score, displays lowest time at top (best) and highest time at bottom (worst)
 function determineHighScore() {
     const userStringTime = theTimer.textContent;
     const userIntTime = convertStringTimeToIntTime(userStringTime);
@@ -164,12 +165,16 @@ function determineHighScore() {
     const thirdHighScoreEmpty = highscores.third.length === 0;
     const allHighScoresEmpty = firstHighScoreEmpty && secondHighScoreEmpty && thirdHighScoreEmpty;
 
+    // if all high scores are empty, populate first high score slot
     if (allHighScoresEmpty) {
         highscores.first = [userStringTime, userIntTime];
-        topThreeScores[0].textContent = userStringTime;
+        updateHighScores();
         return;
     }
 
+    // if first high score is empty or first high score is greater than current time,
+    // replace third high score with second high score, replace second high score with
+    // first high score and finally replace first high score with current time
     if (firstHighScoreEmpty || userIntTime < highscores.first[1]) {
         const tempFirst = highscores.first;
         const tempSecond = highscores.second;
@@ -180,6 +185,9 @@ function determineHighScore() {
         return;
     }
     
+    // if second high score is empty or second high score is greater than current time,
+    // replace third high score with second high score and second high score with current time
+    // first high score time doesn't get altered
     if (secondHighScoreEmpty || userIntTime < highscores.second[1]) {
         const tempSecond = highscores.second;
         highscores.second = [userStringTime, userIntTime];
@@ -187,7 +195,9 @@ function determineHighScore() {
         updateHighScores();
         return;
     }
-    
+
+    // if third high score is empty or third high score is greater than current time,
+    // replace third high score with current time. First and second high score don't get altered
     if (thirdHighScoreEmpty || userIntTime < highscores.third[1]) {
         highscores.third = [userStringTime, userIntTime];
         updateHighScores();
