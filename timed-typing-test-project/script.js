@@ -92,6 +92,8 @@ function reset() {
     time.seconds = 0;
     time.milliseconds = 0;
     theTimer.textContent = '00:00:00';
+    errorsCounter = 0;
+    charactersTyped = 0;
     testArea.disabled = false;
     randomText = selectRandomText();
     originText.textContent = randomText[0];
