@@ -51,6 +51,26 @@ const text = [
         "What advice would I give the average homeowner to protect himself against burglars? Well, the first thing is to keep a light on in the house when you go out. It must be at least a sixty-watt bulb; anything less and the burglar will ransack the house, out of contempt for the wattage.",
         "https://thejohnfox.com/2016/06/funny-books/"
     ],
+    [
+        "Everything we do now lasts forever; not because we want to remember, but because we are no longer permitted to forget.",
+        "https://twitter.com/snowden/status/1172937464488628229"
+    ],
+    [
+        "I don’t believe in closure. What does it really mean? Does it mean the closing of a door, the locking up of memories, the refusal to allow a flow of consciousness that may involve some measure of grief?",
+        "https://www.hookedtobooks.com/funny-book-quotes/"
+    ],
+    [
+        "Doublethink means the power of holding two contradictory beliefs in one’s mind simultaneously and accepting both of them.",
+        "https://www.bookbub.com/blog/best-1984-quotes"
+    ],
+    [
+        "I'll make him an offer he can't refuse. You see, Johnny, we feel that entertainment is going to be a big factor in drawing gamblers into the casinos. We're hoping that you'll sign a contract agreeing to appear 5 times a year. Perhaps convince some of your friends in the movies to do the same. We're counting on you, Johnny.",
+        "https://www.rottentomatoes.com/m/godfather/quotes/"
+    ],
+    [
+        "There are negotiations being made that are going to answer all of your questions and solve all of your problems. That's all I can tell you right now. Carlo, you grew up in Nevada. When we make our move there you're going to be my right hand man. Tom Hagen is no longer Consigliari. He's going to be our lawyer in Vegas. That's no reflection on Tom it's just the way I want it. Besides, if I ever help who's a better Consigliari than my father. That's it.",
+        "https://www.rottentomatoes.com/m/godfather/quotes/"
+    ],
 ];
 
 // starts the timer
