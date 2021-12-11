@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSUN Map Quiz</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main class="row">
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h1>Score: <span id="score"></span>/<span id="total"></span></h1>
+          <p>You missed <span id="incorrect"></span>.</p>
+          <ul id="missed"></ul>
+          <button id="restart">Restart</button>
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <h1>Where is <span id="building-name"></span>?</h1>
+          <p>(Double-click location on map to confirm answer)</p>
+          <button id="next">Next</button>
+        </div>
+        <div id="map"></div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM-htyjtoqFk9Vo1Vg2X7RA3-h4K8zgSk&callback=initMap&libraries=geometry"
+      async
+      defer
+    ></script>
+  </body>
+</html>
